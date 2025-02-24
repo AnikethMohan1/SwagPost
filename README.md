@@ -1,16 +1,54 @@
-# swag_post
+# SwagPost 🚀
 
-A new Flutter project.
+A Postman clone built with Flutter Web and powered by a Go server to handle CORS issues. SwagPost allows you to test APIs seamlessly with support for multiple authentication methods.
 
-## Getting Started
+## Features ✨
 
-This project is a starting point for a Flutter application.
+- 🌐 **Flutter Web** based interface
+- 🔒 **Multiple Authentication Types**:
+  - API Key (Header/Query Params)
+  - Bearer Token
+  - OAuth 2.0
+  - Basic Auth
+- ⚡ **CORS Bypass** using Go server proxy
+- 🛠️ **Full HTTP Request Support** (GET, POST, PUT, DELETE, etc.)
+- 📦 **Request Body** support (JSON, form-data, raw text)
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites 📋
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK (3.0.0 or newer)
+- Go (1.20 or newer)
+- Chrome/Firefox (for web testing)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation & Setup 🛠️
+
+1. **Clone the repository**
+`git clone https://github.com/AnikethMohan1/SwagPost.git`
+
+`cd swagpost`
+
+2. Start Go Server (CORS Proxy)
+`cd golang_server`
+
+` go get . `
+
+` go run .`
+
+3. Start Flutter Web App
+
+`cd ../swag_post`
+
+`flutter pub get`
+
+`flutter run -d chrome`
+
+
+Troubleshooting 🚨
+CORS Errors Still Occurring?
+• Ensure Go server is running
+• Check that request URLs are being routed through the proxy
+• Verify server CORS headers in main.go
+
+
+
+Happy API Testing! 🎉
